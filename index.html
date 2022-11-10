@@ -16,6 +16,7 @@
       <header class="header">
         <div class="header-logo-side">Red<span class="redpages">P</span>ages</div>
         <div class="header-search-side">
+          <!-- line it up with table maybe? -->
           <input type="text" class="search-bar" id="search-bar" placeholder="Enter title or author name" name="search-bar">
         </div>
       </header>
@@ -24,8 +25,33 @@
         <label for="log-button" class="log-button"><img class="log-arrow" src="/images/arrow-dark.png" alt="#"></label>
         <button type="button" id="log-button" class="log-button">Log new book</button>
       </div>
-      <main class="main">Table with each heading as a button to "sort by"
-        
+      <main class="main">
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr id="booksHeader">
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Read Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="aBook">
+                <td>Women</td>
+                <td>Bukowski, Charles</td>
+                <td>150</td>
+                <td>read</td>
+              </tr>
+              <tr class="aBook">
+                <td>Notes From the Underground</td>
+                <td>Dostoevsky, Fyodor</td>
+                <td>200 fhdjksa hfjdksa lasjd fjkl</td>
+                <td>not read</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </main>
     </div>
   </body>
