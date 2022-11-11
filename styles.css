@@ -100,13 +100,14 @@ header{
   padding-right: 0;
 }
 
+/* two form container styles that interact with js to appear on click */
 .form-container {
   height: 0px;
   overflow: hidden;
   transition: .5s;
 }
 
-.form {
+.form-unfolded {
   transition: 1.5s;
   height: 300px;
 }

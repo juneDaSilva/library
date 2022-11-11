@@ -27,8 +27,23 @@
           <img class="log-arrow" src="/images/arrow-dark.png" alt="#">
         </div>
         <div class="form-container">
-          <p>hello</p>
-          <p>world</p>
+          <form class="form" action="#">
+            <div class="titleBlock inputBlock textBlock">
+              <input type="text" id="title" name="title" placeholder="Book title">
+            </div>
+            <div class="authorBlock inputBlock textBlock">
+              <input type="text" id="author" name="author" placeholder="Author">
+            </div>
+            <div class="pagesBlock inputBlock textBlock">
+              <input type="number" id="pages" name="pages" placeholder="Book page amount">
+            </div>
+            <div class="statusBlock inputBlock">
+              <label for="readStatus" class="readLabel switch">Mark as read?
+                <input type="checkbox" id="readStatus" name="readStatus">
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </form>
         </div>
       </div>
       <main class="main">

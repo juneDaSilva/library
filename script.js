@@ -74,7 +74,6 @@ function buildTable(library) {
 
 // ------- ------ Book log form ------ -------
 
-
 const logButton = document.querySelector('.log-button');
 const logArrow = document.querySelector('.log-arrow');
 const formContainer = document.querySelector('.form-container');
@@ -84,10 +83,9 @@ function toggleArrow() {
   logArrow.classList.toggle('log-arrow-active')
 }
 
-
 // function to make form appear
 function toggleForm() {
-  formContainer.classList.toggle('form')
+  formContainer.classList.toggle('form-unfolded')
 }
 
 // make toggleForm and toggleArrow activate on button click
@@ -96,9 +94,11 @@ logButton.addEventListener('click', () => {
   toggleForm; // but not this one?
 });
 
-// logButton.addEventListener('click', toggleForm);
+
+
+
+
+
 // ------- ------- run functions ------- ------
 buildTable(myLibrary);
 
-// run function so page loads with it hidden
-// toggleForm();
