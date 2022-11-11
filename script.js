@@ -56,8 +56,13 @@ function buildTable(library) {
       for (let key in library[i]) {
         let cell = document.createElement('td');
         cell.classList.add('bodyCell');
-        console.log(key, library[i][key]);
-        cell.innerHTML = library[i][key];
+        if (library[i][key] === false) {
+          cell.innerHTML = 'not read';
+        }
+        else if (library[i][key] === true) {
+          cell.innerHTML = 'read'
+        } else {cell.innerHTML = library[i][key];}
+        
 
         // append each cell to row
         row.append(cell);
