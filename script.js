@@ -39,3 +39,36 @@ addBook(new Book( 'A Moveable Feast',
 
 console.log(myLibrary);
 console.log(myLibrary[1].readStatus);
+
+// --------  ---------     ------------- ----------
+
+function buildTable(library) {
+  const tbody = document.querySelector('.booksList');
+  tbody.innerHTML = '';
+
+  // loop over length of library and create row for each entry
+  for (let i = 0; i < library.length; i++) {
+    let row = document.createElement('tr');
+    row.classList.add('bookRow');
+      
+      // loop through entries in each book
+      // for entry, create a cell and populate it with corresponging HTML 
+      for (let key in library[i]) {
+        let cell = document.createElement('td');
+        cell.classList.add('bodyCell');
+        console.log(key, library[i][key]);
+        cell.innerHTML = library[i][key];
+
+        // append each cell to row
+        row.append(cell);
+      }
+    tbody.append(row);
+  };
+  
+    
+  
+  // for each book entry, create a new table row with 4 cells
+
+}
+
+buildTable(myLibrary);

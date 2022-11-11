@@ -22,32 +22,36 @@
       </header>
       <div class="sidebar"> 
         <!-- create drop down form -->
-        <label for="log-button" class="log-button"><img class="log-arrow" src="/images/arrow-dark.png" alt="#"></label>
-        <button type="button" id="log-button" class="log-button">Log new book</button>
+        <div class="button-container">
+          <button type="button" id="log-button" class="log-button">Log New Book</button>
+          <label for="log-button" class="log-button">
+            <img class="log-arrow" src="/images/arrow-dark.png" alt="#">
+          </label>
+        </div>
       </div>
       <main class="main">
         <div class="table-container">
           <table>
-            <thead>
-              <tr id="booksHeader">
-                <th>Title</th>
-                <th>Author</th>
-                <th>Pages</th>
-                <th>Read Status</th>
+            <thead class="header">
+              <tr id="headerRow">
+                <th class="headerCell">Title</th>
+                <th class="headerCell">Author</th>
+                <th class="headerCell">Pages</th>
+                <th class="headerCell">Read Status</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="aBook">
-                <td>Women</td>
-                <td>Bukowski, Charles</td>
-                <td>150</td>
-                <td>read</td>
+            <tbody class="booksList">
+              <tr class="bookRow">
+                <td class="bodyCell">Women</td>
+                <td class="bodyCell">Bukowski, Charles</td>
+                <td class="bodyCell">150</td>
+                <td class="bodyCell">read</td>
               </tr>
-              <tr class="aBook">
-                <td>Notes From the Underground</td>
-                <td>Dostoevsky, Fyodor</td>
-                <td>200 fhdjksa hfjdksa lasjd fjkl</td>
-                <td>not read</td>
+              <tr class="bookRow">
+                <td class="titleCell">Notes From the Underground</td>
+                <td class="authorCell">Dostoevsky, Fyodor</td>
+                <td class="bodyCell">200</td>
+                <td class="bodyCell">not read</td>
               </tr>
             </tbody>
           </table>
