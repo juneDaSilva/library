@@ -40,7 +40,8 @@ addBook(new Book( 'A Moveable Feast',
 console.log(myLibrary);
 console.log(myLibrary[1].readStatus);
 
-// --------  ---------     ------------- ----------
+
+// table populator 
 
 function buildTable(library) {
   const tbody = document.querySelector('.booksList');
@@ -56,7 +57,8 @@ function buildTable(library) {
       for (let key in library[i]) {
         let cell = document.createElement('td');
         cell.classList.add('bodyCell');
-        if (library[i][key] === false) {
+        
+        if (library[i][key] === false) { 
           cell.innerHTML = 'not read';
         }
         else if (library[i][key] === true) {
@@ -64,16 +66,26 @@ function buildTable(library) {
         } else {cell.innerHTML = library[i][key];}
         
 
-        // append each cell to row
         row.append(cell);
       }
     tbody.append(row);
   };
-  
-    
-  
-  // for each book entry, create a new table row with 4 cells
-
 }
 
+// Book log form
+
+const logButton = document.querySelector('.log-button');
+const logArrow = document.querySelector('.log-arrow');
+
+function toggle() {
+  logArrow.classList.toggle('log-arrow-active')
+}
+
+logButton.addEventListener('click', toggle);
+
+
+
+
+
+// ------- ------- run functions ------- ------
 buildTable(myLibrary);

@@ -73,11 +73,18 @@ header{
 
 .sidebar .button-container {
   height: 30px;
+  /* border-bottom: 2px solid white; */
 }
 
-label .log-arrow {
+.log-arrow {
   rotate: -45deg;
   height: 10px;
+  transition: 1s;
+}
+
+.log-arrow-active{
+  transition: 1s;
+  rotate: 45deg;
 }
 
 .log-button {
@@ -91,8 +98,8 @@ label .log-arrow {
   padding: 0px;
   padding: 10px;
   padding-right: 0;
-
 }
+
 
 /* ------ MAIN ------ */
 
