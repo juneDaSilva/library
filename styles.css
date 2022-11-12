@@ -24,7 +24,7 @@ header{
 
 .header-logo-side {
   grid-column: 1/2;
-  color: #dad3d3;
+  color: #f0f0f0;
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 5px;
@@ -48,7 +48,6 @@ header{
   border: 1px solid #e1e1e1;
   color: #3f4246c0;
   letter-spacing: 1px;
-  /* background: transparent; */
   border-radius: 20px;
   height: 25px;
   padding-left: 20px;
@@ -112,7 +111,7 @@ header{
 .form-unfolded {
   transition:  .8s ease-in;
   padding: 15px 0px;
-  height: 400px;
+  height: 310px;
 }
 
 .form{
@@ -178,7 +177,7 @@ header{
   border-radius: 8px;
   background-color: #ae1919;
   cursor: pointer;
-  color: rgb(0, 0, 0);
+  color: rgba(12, 12, 12, 0.817);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 2px;
@@ -235,4 +234,19 @@ tr td {
 
 .table-container table tbody tr{
   border-bottom: 1px solid rgb(86, 86, 86);
+}
+
+.removeButton {
+  content: url(/images/trash-white.png);
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+}
+
+.removeButton:hover {
+  cursor: pointer;
+  transition: .3s;
+  transform: scale(1.2);
 }
