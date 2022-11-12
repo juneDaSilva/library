@@ -199,6 +199,7 @@ main {
   display: flex;
   flex-direction: column;
   padding: 40px;
+  max-width: 1000px;
 }
 
 .table-container {
@@ -234,6 +235,11 @@ tr td {
 
 .table-container table tbody tr{
   border-bottom: 1px solid rgb(86, 86, 86);
+}
+
+.readStatus:hover {
+  color: #d5d9e0aa;
+  cursor: pointer;
 }
 
 .removeButton {

@@ -31,11 +31,15 @@ function buildTable(library) {
         
         if (library[i][key] === false) { 
           cell.innerHTML = 'not read';
+          cell.classList.add('readStatus');
+
         }
         else if (library[i][key] === true) {
           cell.innerHTML = 'read'
+          cell.classList.add('readStatus');
         } else {cell.innerHTML = library[i][key];}
         
+        cell.value = i;
 
         row.append(cell);
       }
@@ -56,7 +60,8 @@ function buildTable(library) {
   };
 
   // Adding the removeButton listener inside the build table function somehow works
-  // whereas building it outside doesnt. Dont know why.
+  // whereas building it outside doesnt. Probably because outside only runs "queryselector once"
+  // so when build table function is run again, query selector isnt run again.
   removeButton = document.querySelectorAll('.removeButton');
 
   removeButton.forEach((button) => {
@@ -71,6 +76,21 @@ function buildTable(library) {
       }
     });
   });
+
+  readButton = document.querySelectorAll('.readStatus');
+
+  
+  readButton.forEach((button) =>{
+    button.addEventListener('click', () => {
+      if (button.innerHTML === 'read') {
+        myLibrary[button.value] = false;
+        button.innerHTML = 'not read';
+      } else {
+        myLibrary[button.value] = true;
+        button.innerHTML = 'read';
+      }
+    })
+  })
 }
 
 // ------- ------ Book log form ------ -------
@@ -141,19 +161,3 @@ buildTable(myLibrary);
 
 
 // ------- -------- Remove book button -------- --------
-
-// removeButton = document.querySelectorAll('.removeButton');
-
-// removeButton.forEach((button) => {
-//   button.addEventListener('click', () => {
-//     // console.log(button.value);
-    
-//     for (let i = 0; i < myLibrary.length; i++) {
-//       if (myLibrary[i].title === button.value) {
-//         myLibrary.splice(i, 1);
-//         console.log(myLibrary);
-//       }
-//     }
-//   });
-// });
-
