@@ -11,37 +11,7 @@ function Book(title, author, pages, readStatus) {
   this.readStatus = Boolean(readStatus);
 }
 
-// Log book function
-function addBook(book) {
-  myLibrary.push(book);
-}
-
-// ------- ------    ---    ------ -------
-
-
-console.log(myLibrary);
-
-// const omats = new Book('The Old Man and the Sea', 'Ernest Hemingway', 150)
-
-addBook(new Book( 'The Old Man and the Sea', 
-                  'Ernest Hemingway', 
-                  150));
-
-console.log(myLibrary);
-
-
-// const mf = new Book('A Moveable Feast', 'Ernest Hemingway', 300, true)
-
-addBook(new Book( 'A Moveable Feast', 
-                  'Ernest Hemingway', 
-                  300, 
-                  true));
-
-console.log(myLibrary);
-console.log(myLibrary[1].readStatus);
-
-
-// table populator 
+// ------- -------- Table populator 
 
 function buildTable(library) {
   const tbody = document.querySelector('.booksList');
@@ -94,8 +64,37 @@ logButton.addEventListener('click', () => {
   toggleForm; // but not this one?
 });
 
+// ------- ------ Add book from form ------ ------ -------
 
+// Log book function
+function addBook(book) {
+  myLibrary.push(book);
+}
 
+form = document.querySelector('.form');
+
+form.addEventListener("submit", (e) => {
+    
+  title = document.querySelector('#title');
+  author = document.querySelector('#author');
+  pages = document.querySelector('#pages');
+  read = document.querySelector('#readStatus');
+  
+  // make a book
+  var book = new Book(title.value, author.value, pages.value, read.checked);
+
+  addBook(book);
+
+  buildTable(myLibrary);
+
+  //  clear form
+  title.value = '';
+  author.value = '';
+  pages.value = '';
+  read.checked = false;
+  
+  e.preventDefault();
+})
 
 
 

@@ -24,7 +24,7 @@ header{
 
 .header-logo-side {
   grid-column: 1/2;
-  color: #fafafa;
+  color: #dad3d3;
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 5px;
@@ -43,16 +43,19 @@ header{
 }
 
 .search-bar {
+  margin-left: 30px;
   flex: 0 1 500px;
   border: 1px solid #e1e1e1;
-  background: #eeeeee;
+  color: #3f4246c0;
+  letter-spacing: 1px;
+  /* background: transparent; */
   border-radius: 20px;
   height: 25px;
   padding-left: 20px;
 }
 
 .search-bar:focus {
-  outline: none ;
+  outline: none;
 }
 
 
@@ -109,7 +112,7 @@ header{
 .form-unfolded {
   transition:  .8s ease-in;
   padding: 15px 0px;
-  height: 300px;
+  height: 400px;
 }
 
 .form{
@@ -129,18 +132,19 @@ header{
 /* only activate properties once form is unfolded */
 .form-unfolded .form div {
   transition: 1s ease-in-out;
-  padding: 5px 0;
+  padding: 20px 0;
 }
 
 .inputBlock input{
   flex: 1;
-  border: 1px solid #e1e1e1;
+  border: 1px solid #52525b9a;
   border-radius: 10px;
   padding-left: 10px;
   height: 20px;
-  background-color: #eeeeee;
+  background-color: transparent;
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  color: #9ca3afaa;
   transition: .2s;
 }
 
@@ -151,14 +155,15 @@ header{
 
 /* read switch */
 .inputBlock .switch {
-  color: #e1e1e1;
+  color: #5e5e68d9;
+  font-weight: 400;
   padding: 0px 5px;
   display: flex;
   align-items: center;
 }
 
 #readStatus {
-  margin-left: 30px;
+  margin-left: 60px;
 }
 
 #readStatus:focus {
@@ -168,7 +173,6 @@ header{
 /* Add book button */
 
 .submitButton {
-  /* flex: 1; */
   padding: 3px 15px;
   border: none;
   border-radius: 8px;
@@ -226,6 +230,7 @@ tr td {
   padding: 10px 0;
   padding-right: 30px;
   font-size: 14px;
+  color: #9ca3afaa;
 }
 
 .table-container table tbody tr{
