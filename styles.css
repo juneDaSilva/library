@@ -248,7 +248,7 @@ tr td {
 }
 
 .removeButton {
-  content: url('images/trash-white.png');
+  content: url(./images/trash-white.png);
   height: 18px;
   display: flex;
   justify-content: center;
