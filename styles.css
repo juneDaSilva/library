@@ -74,17 +74,22 @@ header{
 
 .sidebar .button-container {
   height: 30px;
+  position: relative;
 }
 
 .log-arrow {
+  position: absolute;
+  content: url(/images/arrow-white.png);
   rotate: -45deg;
-  height: 10px;
+  margin-left: 5px;
+  bottom: 4px;
+  height: 14px;
   transition: 1s;
 }
 
 .log-arrow-active{
   transition: 1s;
-  margin-left: 70px;
+  margin-left: 50px;
   rotate: 45deg;
 }
 
