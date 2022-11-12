@@ -76,7 +76,7 @@ function buildTable(library) {
 
 const logButton = document.querySelector('.log-button');
 const logArrow = document.querySelector('.log-arrow');
-const formContainer = document.querySelector('.form-container');
+const formContainer = document.querySelector('.form-container-folded');
 
 // function to make arrow rotate
 function toggleArrow() {

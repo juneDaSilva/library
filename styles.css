@@ -68,12 +68,10 @@ header{
   flex-direction: column;
   align-items: left;
   color: white;
-
 }
 
 .sidebar .button-container {
   height: 30px;
-  /* border-bottom: 2px solid white; */
 }
 
 .log-arrow {
@@ -84,6 +82,7 @@ header{
 
 .log-arrow-active{
   transition: 1s;
+  margin-left: 70px;
   rotate: 45deg;
 }
 
@@ -96,20 +95,97 @@ header{
   letter-spacing: 1px;
   cursor: pointer;
   padding: 0px;
-  padding: 10px;
+  padding: 12px;
   padding-right: 0;
 }
 
 /* two form container styles that interact with js to appear on click */
-.form-container {
+.form-container-folded {
   height: 0px;
   overflow: hidden;
   transition: .5s;
 }
 
 .form-unfolded {
-  transition: 1.5s;
+  transition:  .8s ease-in;
+  padding: 15px 0px;
   height: 300px;
+}
+
+.form{
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  transition: 1s ease-in-out; 
+}
+
+/* property to transition back to so it doesnt "snap" back to no padding */
+.form div {
+  padding: 0;
+  transition: .5s;
+  display: flex;
+}
+
+/* only activate properties once form is unfolded */
+.form-unfolded .form div {
+  transition: 1s ease-in-out;
+  padding: 5px 0;
+}
+
+.inputBlock input{
+  flex: 1;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  padding-left: 10px;
+  height: 20px;
+  background-color: #eeeeee;
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: .2s;
+}
+
+.inputBlock input:focus {
+  outline: 1.5px solid #e1e1e1;
+  transition: .2s;
+}
+
+/* read switch */
+.inputBlock .switch {
+  color: #e1e1e1;
+  padding: 0px 5px;
+  display: flex;
+  align-items: center;
+}
+
+#readStatus {
+  margin-left: 30px;
+}
+
+#readStatus:focus {
+  outline: none;
+}
+
+/* Add book button */
+
+.submitButton {
+  /* flex: 1; */
+  padding: 3px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ae1919;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.submitButton:hover {
+  background-color: #c42b2b;
+}
+
+.submitButton:active {
+  background-color: #a60808;
 }
 
 /* ------ MAIN ------ */
