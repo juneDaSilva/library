@@ -154,6 +154,7 @@ header{
 
 .inputBlock input:focus {
   outline: 1.5px solid #e1e1e1;
+  border-radius: 10px;
   transition: .2s;
 }
 
