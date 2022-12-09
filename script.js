@@ -4,18 +4,22 @@
 let myLibrary = [];
 
 // Book constructor
-function Book(title, author, pages, readStatus) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.readStatus = Boolean(readStatus);
+class Book {
+  constructor(title, author, pages, readStatus){
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.readStatus = Boolean(readStatus);
+  }
 }
 
 
 // ------- -------- Table populator 
 
 function buildTable(library) {
+  // get address for table body
   const tbody = document.querySelector('.booksList');
+  // clear table body and prepare it to be populated with new things (necessary?)
   tbody.innerHTML = '';
 
   // loop over length of library and create row for each entry
@@ -37,7 +41,9 @@ function buildTable(library) {
         else if (library[i][key] === true) {
           cell.innerHTML = 'read'
           cell.classList.add('readStatus');
-        } else {cell.innerHTML = library[i][key];}
+        }
+        // populate book information here by taking the keyth part of the ith book 
+        else {cell.innerHTML = library[i][key];}
         
         cell.value = i;
 
@@ -134,9 +140,10 @@ form.addEventListener("submit", (e) => {
   // make a book
   var book = new Book(title.value, author.value, pages.value, read.checked);
 
-  addBook(book);
 
-  buildTable(myLibrary);
+  addBook(book); // put book into "myLibrary"
+
+  buildTable(myLibrary); // rebuild table with updated myLibrary
 
   //  clear form
   title.value = '';
@@ -156,6 +163,7 @@ var book3 = new Book('Notes From The Underground', 'Fyodor Dosteovsky', 124, tru
 addBook(book1);
 addBook(book2);
 addBook(book3);
+
 
 buildTable(myLibrary);
 
