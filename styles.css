@@ -1,15 +1,14 @@
 /* -------- MAKE LIGHT & DARK MODE FOR THIS PROJECT --------- */
 body {
   font-family: 'Montserrat', sans-serif;
-  margin: 0;
+  height: 100vh;
+  background: no-repeat radial-gradient(#212124, #0f0f11);
 }
 
 .container {
   display: grid;
   grid-template-columns: 230px 3fr;
   grid-template-rows: 50px 1fr;
-  height: 100vh;
-  background: radial-gradient(#212124, #0f0f11);
 }
 
 /* ----- HEADER ----- */
@@ -28,7 +27,8 @@ header{
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 5px;
-  text-align: center;
+  text-align: left;
+  padding-left: 5px
 }
 
 .redpages {
@@ -203,7 +203,8 @@ main {
   padding: 5px;
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  justify-content: center;
+  padding: 20px;
   max-width: 1000px;
 }
 
@@ -221,7 +222,7 @@ main {
 .table-container table thead {
   border-bottom: 2px solid #424242dc;
   border-radius: 50px;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 /* align header */
@@ -260,4 +261,20 @@ tr td {
   cursor: pointer;
   transition: .3s;
   transform: scale(1.2);
+}
+
+@media only screen and (max-width: 700px) {
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table-container table thead {
+    font-size: 10px;
+  }
+
+  tr td {
+    font-size: 10px;
+  }
 }
