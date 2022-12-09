@@ -61,7 +61,7 @@ header{
 /* ------ SIDEBAR ------- */
 
 .sidebar {
-  /* border: 2px solid greenyellow; */
+  
   background-color: transparent;
   grid-row: 2/3;
   grid-column: 1/2;
