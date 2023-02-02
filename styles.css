@@ -1,6 +1,6 @@
 /* -------- MAKE LIGHT & DARK MODE FOR THIS PROJECT --------- */
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   height: 100vh;
   background: no-repeat radial-gradient(#212124, #0f0f11);
 }
@@ -12,7 +12,7 @@ body {
 }
 
 /* ----- HEADER ----- */
-header{
+header {
   background-color: #0e0e0f;
   grid-row: 1/2;
   grid-column: 1/3;
@@ -28,7 +28,7 @@ header{
   font-weight: 400;
   letter-spacing: 5px;
   text-align: left;
-  padding-left: 5px
+  padding-left: 5px;
 }
 
 .redpages {
@@ -57,11 +57,9 @@ header{
   outline: none;
 }
 
-
 /* ------ SIDEBAR ------- */
 
 .sidebar {
-  
   background-color: transparent;
   grid-row: 2/3;
   grid-column: 1/2;
@@ -79,7 +77,7 @@ header{
 
 .log-arrow {
   position: absolute;
-  content: url('./images/arrow-white.png');
+  content: url("./images/arrow-white.png");
   rotate: -45deg;
   margin-left: 5px;
   bottom: 4px;
@@ -87,7 +85,7 @@ header{
   transition: 1s;
 }
 
-.log-arrow-active{
+.log-arrow-active {
   transition: 1s;
   margin-left: 50px;
   rotate: 45deg;
@@ -110,26 +108,26 @@ header{
 .form-container-folded {
   height: 0px;
   overflow: hidden;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .form-unfolded {
-  transition:  .8s ease-in;
+  transition: 0.8s ease-in;
   padding: 15px 0px;
   height: 310px;
 }
 
-.form{
+.form {
   padding: 0px 10px;
   display: flex;
   flex-direction: column;
-  transition: 1s ease-in-out; 
+  transition: 1s ease-in-out;
 }
 
 /* property to transition back to so it doesnt "snap" back to no padding */
 .form div {
   padding: 0;
-  transition: .5s;
+  transition: 0.5s;
   display: flex;
 }
 
@@ -139,7 +137,7 @@ header{
   padding: 20px 0;
 }
 
-.inputBlock input{
+.inputBlock input {
   flex: 1;
   border: 1px solid #52525b9a;
   border-radius: 10px;
@@ -149,13 +147,17 @@ header{
   font-size: 12px;
   letter-spacing: 2px;
   color: #9ca3afaa;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .inputBlock input:focus {
   border: 1.5px solid #e1e1e1;
   outline: none;
-  transition: .2s;
+  transition: 0.2s;
+}
+
+.inputBlock input.invalid {
+  border: 1.5px solid red;
 }
 
 /* read switch */
@@ -216,8 +218,8 @@ main {
 }
 
 .table-container table {
- flex: 1; 
- border-collapse: collapse;
+  flex: 1;
+  border-collapse: collapse;
 }
 
 .table-container table thead {
@@ -240,7 +242,7 @@ tr td {
   color: #9ca3afaa;
 }
 
-.table-container table tbody tr{
+.table-container table tbody tr {
   border-bottom: 1px solid rgb(86, 86, 86);
 }
 
@@ -255,17 +257,16 @@ tr td {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .removeButton:hover {
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
   transform: scale(1.2);
 }
 
 @media only screen and (max-width: 700px) {
-  
   .container {
     display: flex;
     flex-direction: column;

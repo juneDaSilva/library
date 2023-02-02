@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,900;1,200;1,400;1,600;1,700;1,900&family=Vollkorn:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,900;1,200;1,400;1,600;1,700;1,900&family=Vollkorn:wght@400;500;700;800&display=swap"
+      rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <title>Library</title>
   </head>
-  
+
   <body>
     <div class="container">
       <header class="header">
@@ -20,23 +22,23 @@
           <!-- <input type="text" class="search-bar" id="search-bar" placeholder="Enter title or author name" name="search-bar"> -->
         </div>
       </header>
-      <div class="sidebar"> 
+      <div class="sidebar">
         <!-- create drop down form -->
         <div class="button-container">
           <button type="button" onclick="toggleForm()" id="log-button" class="log-button">Log New Book</button>
-          <img class="log-arrow"  alt="#">
+          <img class="log-arrow" alt="#">
         </div>
         <div class="form-container-folded">
-          
+
           <form class="form" action="#" method="post">
             <div class="titleBlock inputBlock textBlock">
-              <input type="text" id="title"  name="title" placeholder="Book title">
+              <input type="text" id="title" name="title" placeholder="Book title" required>
             </div>
             <div class="authorBlock inputBlock textBlock">
-              <input type="text" id="author" name="author" placeholder="Author">
+              <input type="text" id="author" name="author" placeholder="Author" required>
             </div>
             <div class="pagesBlock inputBlock textBlock">
-              <input type="number" id="pages" name="pages" placeholder="Number of pages">
+              <input type="number" id="pages" name="pages" placeholder="Number of pages" min='1' required>
             </div>
             <div class="statusBlock inputBlock">
               <label for="readStatus" class="readLabel switch">Mark as read?
@@ -47,7 +49,7 @@
               <button type="#" class="submitButton">Add book</button>
             </div>
           </form>
-        
+
         </div>
       </div>
       <main class="main">
@@ -63,7 +65,7 @@
               </tr>
             </thead>
             <tbody class="booksList">
-             
+
             </tbody>
           </table>
         </div>
